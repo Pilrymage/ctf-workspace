@@ -1,0 +1,20 @@
+[workspace]
+name = "ctf-crypto-env"
+version = "0.1.0"
+description = "SageMath and Crypto environment for CTFs"
+authors = ["CTFer"]
+channels = ["https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/"] 
+platforms = ["linux-64"]
+
+[dependencies]
+python = ">=3.10"
+sage = ">=10.2"       # 数论库
+gmpy2 = ">=2.1.5"     # 高精运算
+sympy = ">=1.12"      # 符号计算
+z3-solver = ">=4.16.0.0,<5" # 约束求解
+
+[pypi-dependencies]
+pycryptodome = ">=3.20.0"  
+pwntools = ">=4.11.0"      
+tqdm = ">=4.66.0"          
+ctf-toolkit = { path = "../", editable = true }

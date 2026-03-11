@@ -1,0 +1,32 @@
+# 1. 指定构建系统 (解决你报错的关键)
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# 2. 项目核心信息与 Python 版本限制
+[project]
+name = "ctf-toolkit"
+version = "0.1.0"
+description = "My personal CTF toolkit and library"
+readme = "README.md"
+# CTF 推荐使用 3.10 以上，完美支持强类型注解 (Type Hints) 和 match-case 语法
+requires-python = ">=3.10" 
+
+# 3. CTF 常用基础依赖库
+dependencies = [
+    "pwntools>=4.11.0",         # Pwn 必备
+    "requests>=2.31.0",         # Web 必备
+    "tqdm>=4.66.0",             # 杂项/爆破必备：显示进度条
+    "pycryptodome>=3.20.0",     # Crypto 必备：代替自带的 hashlib/crypto
+    "beautifulsoup4>=4.12.0",   # Web 必备：快速解析 HTML 爬取数据
+    "typer>=0.12.0",            # 工具箱必备：我们之前提到的命令行 CLI 构建工具
+]
+
+# 4. 【核心修复区】告诉构建系统只把 ctf_lib 当作我们的包！
+[tool.hatch.build.targets.wheel]
+packages = ["ctf_lib"]
+
+# 5. 可选：为你未来的全局命令行工具占个位置
+# 这样配置后，以后你在终端输入 `ctf` 就等于运行 ctf_lib/cli.py 里的 app
+[project.scripts]
+ctf = "ctf_lib.cli:app"
