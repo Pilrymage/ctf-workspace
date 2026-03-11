@@ -12,9 +12,12 @@ sage = ">=10.2"       # 数论库
 gmpy2 = ">=2.1.5"     # 高精运算
 sympy = ">=1.12"      # 符号计算
 z3-solver = ">=4.16.0.0,<5" # 约束求解
+fpylll = ">=0.6.4,<0.7"
+tqdm = ">=4.67.3,<5"
+pytest = ">=9.0.2,<10"
 
 [pypi-dependencies]
 pycryptodome = ">=3.20.0"  
 pwntools = ">=4.11.0"      
 tqdm = ">=4.66.0"          
-ctf-toolkit = { path = "../", editable = true }
+ctf-toolkit = { path = ".", editable = true }

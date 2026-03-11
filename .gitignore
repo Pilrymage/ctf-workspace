@@ -4,11 +4,11 @@
 !Makefile
 !README.md
 !pyproject.toml
+!pixi.toml
 !challenges.csv
 !setup.py
 
 !Crypto/
-!Crypto/pixi.toml
 
 !ctf_lib/
 !ctf_lib/**
