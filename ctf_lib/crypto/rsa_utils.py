@@ -2,7 +2,7 @@ import logging
 from typing import Optional
 
 # 显式导入需要的 Sage 模块，而不是 import *，这在库文件中是好习惯
-from sage.all import PolynomialRing, Zmod, Integer
+from sage.all import PolynomialRing, Zmod 
 
 # 初始化当前模块的日志记录器
 logger = logging.getLogger(__name__)
@@ -47,7 +47,7 @@ def coppersmith_known_high_bits_p(
         
     # 5. 验证根是否正确
     for root in roots:
-        p_recovered = p_high + Integer(root)
+        p_recovered = p_high + int(root)
         if n % p_recovered == 0:
             logger.info("Successfully recovered p!")
             return int(p_recovered)  # 强制转换为标准 Python int
