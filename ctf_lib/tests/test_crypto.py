@@ -1,4 +1,5 @@
 from ctf_lib.crypto.rsa_utils import coppersmith_known_high_bits_p
+from ctf_lib.crypto.math import extended_gcd
 
 def test_coppersmith_known_high_bits_p():
     """
@@ -20,3 +21,12 @@ def test_coppersmith_known_high_bits_p():
     assert isinstance(recovered_p, int), f"返回类型错误，期望 int，实际是 {type(recovered_p)}"
     assert n % recovered_p == 0, "恢复出的 p 不是 n 的因子"
     assert 1 < recovered_p < n, "恢复出了平凡因子"
+    
+def test_extended_gcd():
+    a,b = 26513, 32321
+    
+    gcd, x, y = extended_gcd(a,b)
+    assert gcd == 1
+    assert x == 10245
+    assert y == -8404
+    
