@@ -116,7 +116,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--template",
-        default=base_dir / ".template",
+        default=base_dir / "template",
         type=Path,
         help="模板目录路径，默认使用当前目录下的 .template",
     )

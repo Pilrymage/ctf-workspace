@@ -1,14 +1,15 @@
 *
 
+!shell.nix
+!setup.sh
 !.gitignore
 !Makefile
 !README.md
 !pyproject.toml
 !pixi.toml
 !challenges.csv
-!setup.py
+!challenges.py
 
-!Crypto/
 
 !ctf_lib/
 !ctf_lib/**
