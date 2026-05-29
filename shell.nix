@@ -16,8 +16,10 @@ let
     angr
     asteval
     flask
+    gmpy2
     ipython
     jupyter
+    numpy
     pillow
     psutil
     pwntools
@@ -95,6 +97,6 @@ pkgs.mkShell {
     ++ tools.web;
 
   shellHook = ''
-    echo "🎯 pwn.college CTF 环境已加载"
+    echo '🎯 pwn.college CTF 环境已加载'
   '';
 }

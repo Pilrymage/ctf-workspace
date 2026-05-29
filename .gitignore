@@ -11,14 +11,14 @@
 !challenges.py
 
 
-!ctf_lib/
-!ctf_lib/**
+!ctf/
+!ctf/**
 
 !.template/
 !.template/**
 
 
-ctf_lib/**/__pycache__/
-ctf_lib/**/*.py[cod]
-ctf_lib/**/.pytest_cache/
-ctf_lib/**/.mypy_cache/
+ctf/**/__pycache__/
+ctf/**/*.py[cod]
+ctf/**/.pytest_cache/
+ctf/**/.mypy_cache/
